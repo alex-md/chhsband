@@ -39,3 +39,20 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+iframe {
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15), 0 6px 8px rgba(0, 0, 0, 0.1);
+    /* hover:scale-105 */
+}

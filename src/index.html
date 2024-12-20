@@ -1,31 +1,41 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CHHS Marching Band</title> <!-- Tailwind CSS -->
-        <script src="https://cdn.tailwindcss.com"></script> <!-- Google Fonts -->
+        <title>CHHS Marching Band</title>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"> <!-- Font Awesome -->
+            rel="stylesheet">
+        <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/src/css/tailwind.css">
+        <!-- Custom JS -->
+        <script defer src="/src/js/main.js"></script>
     </head>
 
-    <body class="font-[Poppins] bg-gray-50"> <!-- Navigation -->
+    <body class="font-[Poppins] bg-gray-50">
+        <!-- Navigation -->
         <nav class="bg-blue-800 text-white shadow-lg">
             <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center py-4"> <a href="index.html" class="text-xl font-bold">CHHS
-                        Band</a>
-                    <div class="hidden md:flex space-x-8"> <a href="index.html" class="hover:text-blue-200">Home</a> <a
-                            href="pages/calendar.html" class="hover:text-blue-200">Calendar</a> <a
-                            href="pages/about.html" class="hover:text-blue-200">About</a>
-                    </div> <button class="md:hidden"> <i class="fas fa-bars"></i> </button>
+                <div class="flex justify-between items-center py-4">
+                    <a href="index.html" class="text-xl font-bold">CHHS Band</a>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="hover:text-blue-200">Home</a>
+                        <a href="pages/calendar.html" class="hover:text-blue-200">Calendar</a>
+                        <a href="pages/about.html" class="hover:text-blue-200">About</a>
+                    </div>
+                    <button class="md:hidden" id="menu-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
             </div>
-        </nav><!-- Hero Section -->
+        </nav>
+        <!-- Hero Section -->
         <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-20">
             <div class="container mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to CHHS Marching Band</h1>
@@ -35,14 +45,15 @@
                     Us</a>
             </div>
         </header>
-
         <!-- Main Content -->
-        <main class="container mx-auto px-4 py-12">
-            <!-- Add your sections here -->
-        </main>
-
+        <!-- Google Doc Embed -->
+        <section class="container mx-auto px-4 py-8">
+            <iframe
+                src="https://docs.google.com/document/d/e/2PACX-1vTzq6r1VDj9Z8bPt46sA3V7zPvxSwRRjK1wBTm3jcw5o39Ux43oSXwwXBRcDAHEvZNKxjhRM8ciTwly/pub"
+                width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+        </section>
         <!-- Footer -->
-        <footer class="bg-gray-900 text-white py-8">
+        <footer class="bg-emerald-900 text-white py-8">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div>
@@ -50,14 +61,7 @@
                         <p>Email: elabrie@phoenixunion.org</p>
                         <p>Phone: 602-764-3158</p>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                        <ul class="space-y-2">
-                            <li><a href="pages/calendar.html" class="hover:text-blue-400">Calendar</a></li>
-                            <li><a href="pages/about.html" class="hover:text-blue-400">About</a></li>
-                        </ul>
-                    </div>
-
+                    <!-- Add more footer content here if needed -->
                 </div>
             </div>
         </footer>
