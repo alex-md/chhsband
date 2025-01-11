@@ -1,4 +1,4 @@
-Arraydocument.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Navigation menu toggle
     const menuButton = document.getElementById('menu-button');
     const navLinks = document.querySelector('nav .hidden.md\\:flex');
@@ -32,18 +32,29 @@ function loadHomeContent() {
 }
 
 function loadCalendarContent() {
+    console.log('Loading calendar content...');
     const mainContent = document.querySelector('main');
-    if (!mainContent) return;
+    if (!mainContent) {
+        console.error('Main content element not found');
+        return;
+    }
+    console.log('Main content element found');
 
     const container = document.createElement('div');
-    container.className = "overflow-hidden rounded-lg shadow-lg";
+    container.className = "overflow-hidden rounded-lg shadow-lg w-full h-[800px]";
     
     const iframe = document.createElement('iframe');
-    iframe.src = "https://calendar.google.com/calendar/u/0/embed?color=%234986e7&src=ge3p207bq69rq3m8ufugntrpu8@group.calendar.google.com";
-    iframe.className = "w-full h-screen border-none";
+    iframe.src = "https://calendar.google.com/calendar/embed?src=ge3p207bq69rq3m8ufugntrpu8%40group.calendar.google.com&showTitle=0&showNav=1&showPrint=0&showTabs=1&showCalendars=0&showTz=1&height=800&wkst=1&bgcolor=%23ffffff&ctz=America%2FPhoenix";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "0";
+    iframe.className = "w-full h-full";
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('scrolling', 'no');
     
     container.appendChild(iframe);
     mainContent.appendChild(container);
+    console.log('Calendar iframe added to page');
 }
 
 function loadAboutContent() {
