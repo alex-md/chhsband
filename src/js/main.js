@@ -1,15 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigation menu toggle
-    const menuButton = document.getElementById('menu-button');
-    const navLinks = document.querySelector('nav .hidden.md\\:flex');
-
-    menuButton.addEventListener('click', () => {
-        navLinks.classList.toggle('hidden');
-    });
-
     // Load page content based on current page
     const currentPage = window.location.pathname;
-    
+
     if (currentPage.includes('calendar.html')) {
         loadCalendarContent();
     } else if (currentPage.includes('about.html')) {
@@ -27,34 +19,8 @@ function loadHomeContent() {
     iframe.src = "https://docs.google.com/document/d/e/2PACX-1vTzq6r1VDj9Z8bPt46sA3V7zPvxSwRRjK1wBTm3jcw5o39Ux43oSXwwXBRcDAHEvZNKxjhRM8ciTwly/pub";
     iframe.frameBorder = "0";
     iframe.allowFullscreen = true;
-    
+
     mainContent.appendChild(iframe);
-}
-
-function loadCalendarContent() {
-    console.log('Loading calendar content...');
-    const mainContent = document.querySelector('main');
-    if (!mainContent) {
-        console.error('Main content element not found');
-        return;
-    }
-    console.log('Main content element found');
-
-    const container = document.createElement('div');
-    container.className = "overflow-hidden rounded-lg shadow-lg w-full h-[800px]";
-    
-    const iframe = document.createElement('iframe');
-    iframe.src = "https://calendar.google.com/calendar/embed?src=ge3p207bq69rq3m8ufugntrpu8%40group.calendar.google.com&showTitle=0&showNav=1&showPrint=0&showTabs=1&showCalendars=0&showTz=1&height=800&wkst=1&bgcolor=%23ffffff&ctz=America%2FPhoenix";
-    iframe.style.width = "100%";
-    iframe.style.height = "100%";
-    iframe.style.border = "0";
-    iframe.className = "w-full h-full";
-    iframe.setAttribute('frameborder', '0');
-    iframe.setAttribute('scrolling', 'no');
-    
-    container.appendChild(iframe);
-    mainContent.appendChild(container);
-    console.log('Calendar iframe added to page');
 }
 
 function loadAboutContent() {
@@ -79,7 +45,7 @@ function loadAboutContent() {
             </div>
         </div>
     `;
-    
+
     mainContent.innerHTML = content;
 }
 
